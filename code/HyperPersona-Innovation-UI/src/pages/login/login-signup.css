@@ -1,0 +1,97 @@
+.login-signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: auto;
+  background-image: url('../../imageassets/bbg.jpg');
+  background-size: cover;
+  background-position: top;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  background-image: url('../../imageassets/bg.jpg');
+  background-position: 100vh;
+  border: 2px solid rgba(179, 26, 26, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 350px;
+  width: 90%;
+  margin: auto;
+  max-height: 90%;
+}
+.page-container{
+  overflow-y: auto;
+  padding: 1px;
+  max-height: 500px;
+  max-width: 100%;
+
+}
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"],
+.form-container input[type="tel"]{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: auto;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+.MuiFormControl-root {
+  width: 100%;
+  padding: 8px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  padding: 8px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.tab-button {
+  width: 48%;
+}
+
+.divider {
+  margin: 1rem 0;
+}
+
+.social-button {
+  margin-top: 10px;
+}
+
+.terms-text {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.terms-text a {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.terms-text a:hover {
+  text-decoration: underline;
+}
+
+.beanstack-text {
+  display: flex;
+  position: relative;
+  color: #0c0c0c;
+  justify-content: center;
+  align-content: center;
+}

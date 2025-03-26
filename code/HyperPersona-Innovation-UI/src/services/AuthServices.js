@@ -27,9 +27,9 @@ export const login = (loginData, setToken, setUserInfo) => {
     .then((response) => {
       if(response.data)
       {
-        localStorage.setItem('token', response.data.accessToken);
-        setToken(response.data.accessToken);
-        setUserInfo(response.data.userInfo);
+        localStorage.setItem('token', response.data);
+        setToken(response.data);
+       // setUserInfo(response.data.userInfo);
       }
     })
     .catch((error) => {

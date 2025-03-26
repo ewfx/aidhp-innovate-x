@@ -36,7 +36,7 @@ export default function FullPageOverlay({ message, link, linkText }) {
         <Typography variant="h6" sx={{ whiteSpace: "pre-line" }}>
             {message}
         </Typography>
-        <Button onClick={() => navigate(`${"/vbank"}${link}`)} 
+        <Button onClick={() => navigate(`${"/hyperpersonalization"}${link}`)}
           variant="contained" 
           sx={{ mt: 2 }}>
           {linkText}

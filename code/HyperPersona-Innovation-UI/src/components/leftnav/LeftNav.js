@@ -24,7 +24,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 const openDrawerTheme = (theme) => ({
-  width: 200,
+  width: 250,
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
@@ -45,7 +45,7 @@ const closeDrawerTheme = (theme) => ({
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
-  width: 200,
+  width: 250,
   flexShrink: 0,
   whiteSpace: "nowrap",
   boxSizing: "border-box",

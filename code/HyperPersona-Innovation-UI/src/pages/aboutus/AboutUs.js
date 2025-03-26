@@ -1,7 +1,8 @@
 import React from "react";
-import { makeStyles }  from "@mui/styles";
+import { makeStyles } from "@mui/styles";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 import AppCarousel from "../../components/carousel/AppCarousel";
 import society1 from "../../imageassets/society1.jpg";
 import society2 from "../../imageassets/society2.jpg";
@@ -50,21 +51,22 @@ const AboutUs = () => {
         <Grid item xs={6}>
           {/* Society Information */}
           <div>
-            <h2>About Our Society</h2>
-            <p>
-              Our society values innovation and creativity, encouraging members
-              to explore new ideas and pursue their passions. With a focus on
-              social responsibility, our society actively engages in initiatives
-              aimed at making a positive impact in our local community and
-              beyond. We pride ourselves on creating a supportive environment
-              where members can collaborate, learn, and grow together.
-            </p>
-            <p>
-              At the heart of our society lies a commitment to promoting
-              diversity and embracing the unique perspectives of every
-              individual. Our society is a vibrant community dedicated to
-              fostering inclusivity and belonging among its members.
-            </p>
+            <Typography variant="h2" gutterBottom>
+              About Our Recommend System
+            </Typography>
+            <Typography variant="body1" paragraph>
+              A recommendation system is an artificial intelligence or AI algorithm,
+              usually associated with machine learning, that uses Big Data to suggest
+              or recommend additional products to consumers. These can be based on various
+              criteria, including past purchases, search history, demographic information, and other factors.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Recommender systems are a critical component driving personalized user experiences,
+              deeper engagement with customers, and powerful decision support tools in retail,
+              entertainment, healthcare, finance, and other industries. On some of the largest
+              commercial platforms, recommendations account for as much as 30% of the revenue.
+              A 1% improvement in the quality of recommendations can translate into billions of dollars in revenue.
+            </Typography>
             {/* Add more information about the society as needed */}
           </div>
         </Grid>

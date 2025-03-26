@@ -47,7 +47,7 @@ export function GetPreferenceDialog() {
         aria-label="Preference Tabs"
       >
         <Tab label="Switch Role" />
-        <Tab label="Switch Society" />
+        <Tab label="Switch Preferences" />
       </Tabs>
 
       <TabPanel value={selectedTab} index={0}>
@@ -69,20 +69,22 @@ export function GetPreferenceDialog() {
         </FormControl>
       </TabPanel>
       <TabPanel value={selectedTab} index={1}>
-        <Typography variant="h6">Switch Society</Typography>
+        <Typography variant="h6">Switch Preferences</Typography>
 
         <FormControl fullWidth sx={{ mt: 2 }}>
-          <InputLabel id="select-society-label">Select Society</InputLabel>
+          <InputLabel id="select-society-label">Select Preferences</InputLabel>
           <Select
             labelId="select-society-label"
-            id="select-society"
+            id="select-Preferences"
             value={selectedSociety}
             onChange={handleSocietyChange}
-            label="Select Society"
+            label="Select Preferences"
           >
-            <MenuItem value="society1">Society 1 (Default)</MenuItem>
-            <MenuItem value="society2">Society 2</MenuItem>
-            <MenuItem value="society3">Society 3</MenuItem>
+            <MenuItem value="society1">Lux bags (Default)</MenuItem>
+            <MenuItem value="society2">Lux Apparels</MenuItem>
+            <MenuItem value="society3">Travel</MenuItem>
+            <MenuItem value="society4">Jewellery</MenuItem>
+            <MenuItem value="society5">Shoes</MenuItem>
           </Select>
         </FormControl>
       </TabPanel>

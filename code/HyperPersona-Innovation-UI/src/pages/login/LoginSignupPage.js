@@ -45,7 +45,7 @@ const LoginSignupPage = () => {
   const [message, setMessage]=useState('');
   const [errorMessage, setErrorMessage]=useState('');
   const { networkError } = useErrorContext();
-  
+
 
 
   const handleOpenDialog = (title,content,size,actionArr) => {
@@ -54,7 +54,7 @@ const LoginSignupPage = () => {
     setDialogSize(size);
     setButtonArr(actionArr);
     setDialogOpen(true);
-    
+
   };
 
   const navigate = useNavigate();
@@ -74,18 +74,18 @@ const LoginSignupPage = () => {
       handleOpenDialog("SignUp Success",message,"sm",[
         { label: "OK", onClick: handleAction, type: "primary" },
       ]);
-    }     
+    }
   }, [signupVal,isLogin]);
   useEffect(() => {
     if (errorMessage){
       handleOpenDialog("Signup Failed",errorMessage,"sm",[
         { label: "OK", onClick: handleAction, type: "primary" },
       ]);
-    }     
+    }
   }, [errorMessage]);
 
- 
-  
+
+
   const handleAction = () => {
     setMessage('');
     setErrorMessage('');
@@ -93,7 +93,7 @@ const LoginSignupPage = () => {
     if(message && !isLogin)
       navigate('/hyperpersonalization/home');
   }
-  
+
   const handleSignup = () => {
     const datestr = (new Date()).toISOString().slice(0, 19).replace("T", " ");
     const errors = validateSignupForm();
@@ -101,23 +101,18 @@ const LoginSignupPage = () => {
       setErrors(errors);
     } else {
       const userData = {
-        'userName': userNameSignUp,
-        'userEmail':email,
+        'fullName': firstName+" "+middleName+" "+lastName,
+        'email':email,
         'password': signuppassword,
-        'createdDate': datestr,
+        'phone': phoneNumber,
         'updatedDate':datestr,
         'emailVerified':"N",
-        'person': {
-          'firstName': firstName,
-          'lastName': lastName,
-          'dob': dob,
-          'email': email,
-          'phoneNumber': phoneNumber,
-          'createdDate': datestr,
-        'updatedDate':datestr,
-        }
+        'dateOfBirth': dob,
+        'gender': "M",
+        'socialMedia': "Facebook",
+        'interest': "sports,shopping,travel",
       };
-      signup(userData, setSignupVal, setMessage,setErrorMessage);        
+      signup(userData, setSignupVal, setMessage,setErrorMessage);
     }
   };
 
@@ -140,7 +135,7 @@ const LoginSignupPage = () => {
     }
     if (password.trim() === '') {
       errors.password = 'Password is required';
-    }       
+    }
     return errors;
   };
   const validateSignupForm = () => {
@@ -162,7 +157,7 @@ const LoginSignupPage = () => {
     }
     if (phoneNumber.trim() === '') {
       errors.phoneNumber = 'Phone number is required';
-    }    
+    }
     if(signuppassword !== confirmPassword)
     {
       errors.confirmPassword= 'Passwords do not match';
@@ -199,7 +194,7 @@ const LoginSignupPage = () => {
     // Logic for Facebook signup
     console.log("Facebook Signup");
   };
- 
+
   const createSocialLogin = () => (
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} align="center">
@@ -210,7 +205,7 @@ const LoginSignupPage = () => {
       </Grid>
     </Grid>
   );
- 
+
   const signInForm = () => (
     <>
           {createInput("text", "Username or Email", userName, setUserName, errors["userName"])}

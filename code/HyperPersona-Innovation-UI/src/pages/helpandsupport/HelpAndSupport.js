@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Paper, Typography, TextField, Button } from '@mui/material';
+import { Container, Grid, Paper, Typography, TextField, Button, Box } from '@mui/material';
 
 const HelpAndSupportPage = () => {
   const handleSubmit = (event) => {
@@ -7,28 +7,27 @@ const HelpAndSupportPage = () => {
     // Add form submission logic here
   };
 
-  
   return (
     <Container maxWidth="md">
-      <Paper style={{ padding: '20px', marginBottom: '20px' }}>
-        <Typography variant="h5" gutterBottom>
-        
+      <Paper style={{ padding: '20px', marginBottom: '20px', backgroundColor: '#f5f5f5' }}>
+        <Typography variant="h4" gutterBottom>
+          Help & Support
         </Typography>
-        <Typography variant="body1">
-        <h3>Contact Information</h3>
-            <p>Email: helpandsupport@2024.com</p>
-            <p>Phone: +917890851263</p>
-            
-        <h3>Working Hours</h3>
-            <p>Monday - Friday: 10:00 AM to 5:00 PM</p>
-            <p>Saturday - Sunday: Closed</p>
-
-        </Typography>
+        <Box mb={2}>
+          <Typography variant="h6">Contact Information</Typography>
+          <Typography variant="body1">Email: helpandsupport@2025.com</Typography>
+          <Typography variant="body1">Phone: +123456789</Typography>
+        </Box>
+        <Box mb={2}>
+          <Typography variant="h6">Working Hours</Typography>
+          <Typography variant="body1">Monday - Friday: 10:00 AM to 5:00 PM</Typography>
+          <Typography variant="body1">Saturday - Sunday: Closed</Typography>
+        </Box>
       </Paper>
 
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
-          <Paper style={{ padding: '20px' }}>
+          <Paper style={{ padding: '20px', backgroundColor: '#e0f7fa' }}>
             <Typography variant="h6" gutterBottom>
               Support
             </Typography>
@@ -38,7 +37,7 @@ const HelpAndSupportPage = () => {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper style={{ padding: '20px' }}>
+          <Paper style={{ padding: '20px', backgroundColor: '#e0f7fa' }}>
             <Typography variant="h6" gutterBottom>
               Submit a Query
             </Typography>
@@ -72,7 +71,7 @@ const HelpAndSupportPage = () => {
                 rows={4}
                 aria-label="Your Query"
               />
-              <Button type="submit" variant="contained" color="primary">
+              <Button type="submit" variant="contained" color="primary" fullWidth>
                 Submit
               </Button>
             </form>

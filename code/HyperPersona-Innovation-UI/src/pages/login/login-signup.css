@@ -17,10 +17,10 @@
   border: 2px solid rgba(179, 26, 26, 0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  max-width: 350px;
-  width: 90%;
+  max-width: 500px;
+  width: 100%;
   margin: auto;
-  max-height: 90%;
+  max-height: 100%;
 }
 .page-container{
   overflow-y: auto;
@@ -89,9 +89,6 @@
 }
 
 .beanstack-text {
-  display: flex;
-  position: relative;
-  color: #0c0c0c;
-  justify-content: center;
-  align-content: center;
+  text-align: center;
+  margin-top: 20px;
 }

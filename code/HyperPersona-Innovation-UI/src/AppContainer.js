@@ -24,12 +24,13 @@ import Header from "./components/header/Header";
 import LeftNav from "./components/leftnav/LeftNav";
 import "./App.css";
 import AboutUs from "./pages/aboutus/AboutUs";
+import Home from "./pages/home/Home";
 import HelpAndSupport from "./pages/helpandsupport/HelpAndSupport";
 import { Navigate } from "react-router-dom";
 import { useAxiosInterceptors } from "./api/axiosApi";
 
 const LoginForm = lazy(() => import("./pages/login/Login"));
-const Home = lazy(() => import("./pages/home/Home"));
+const Recommendation = lazy(() => import("./pages/recommendation/recommendation"));
 const AdminHome = lazy(() => import("./pages/admin/AdminHome"));
 const light = {
   palette: {
@@ -129,6 +130,7 @@ const AppContainer = () => {
                 <Typography component={"div"} sx={{ minHeight: "87vh" }}>
                   <Routes>
                     <Route path="/hyperpersonalization/home" element={<Home />} />,
+                    <Route path="/hyperpersonalization/recommendation" element={<Recommendation />} />,
                     <Route path="/hyperpersonalization/adminhome" element={<AdminHome />} />,
                     <Route path="/hyperpersonalization/aboutus" element={<AboutUs />} />,
                     <Route path="/hyperpersonalization/support" element={<HelpAndSupport />} />,
